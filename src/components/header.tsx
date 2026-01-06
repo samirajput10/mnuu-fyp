@@ -12,7 +12,7 @@ export function Header() {
             </div>
           </div>
           <div>
-            <strong className="block text-sm font-bold tracking-wide">Mainsoor character</strong>
+            <strong className="block text-sm font-bold tracking-wide">AI skin disease detection</strong>
             <small className="block max-w-[48vw] overflow-hidden text-ellipsis whitespace-nowrap text-xs text-black/70">
               Blue & White Medical-Tech Landing Page • Upload • Preview • Confidence • Privacy
             </small>
