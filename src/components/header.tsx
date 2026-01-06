@@ -6,10 +6,8 @@ export function Header() {
     <header className="sticky top-3.5 z-50 rounded-full border bg-white/70 p-3 shadow-lg backdrop-blur-md">
       <div className="mx-auto flex max-w-7xl items-center justify-between gap-4">
         <Link href="/" className="flex min-w-0 items-center gap-3">
-          <div className="relative h-10 w-10 flex-shrink-0 overflow-hidden rounded-xl bg-gradient-to-br from-accent to-primary shadow-lg">
-            <div className="animate-[shimmer_6s_ease-in-out_infinite] absolute inset-[-40%] opacity-35" style={{transform: 'translateX(-10%) rotate(25deg)'}}>
-              <div className="h-full w-full bg-[radial-gradient(circle_at_30%_30%,rgba(255,255,255,0.85),transparent_45%)]" />
-            </div>
+          <div className="relative h-10 w-10 flex-shrink-0 overflow-hidden rounded-xl bg-gradient-to-br from-accent to-primary shadow-lg flex items-center justify-center">
+            <Logo className="w-6 h-6 text-white" />
           </div>
           <div>
             <strong className="block text-sm font-bold tracking-wide">AI skin disease detection</strong>
