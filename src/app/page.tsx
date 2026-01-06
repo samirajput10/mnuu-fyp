@@ -142,7 +142,7 @@ export default function Home() {
           mockup={
             <Mockup title="Privacy Screen (Mockup)" label="Consent-first + no-storage mode">
               <Image 
-                src="https://images.unsplash.com/photo-1555774698-0b77e0abfe79?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wzMzc4fDB8MXxjb2xsZWN0aW9ufDE2fDE2ODg4Mjl8fHx8fDJ8fDE3MjE4OTI1MTd8&ixlib=rb-4.0.3&q=80&w=1080" 
+                src="https://images.unsplash.com/photo-1667372283496-893f0b1e7c16?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxM3x8Tm8lMjBkYXRhYmFzZSUyMCUyMGRhdGFiYXNlJTIwfGVufDB8fHx8MTc2NzcyNjYzMHww&ixlib=rb-4.1.0&q=80&w=1080" 
                 alt="Privacy-first mockup"
                 width={900}
                 height={620}
