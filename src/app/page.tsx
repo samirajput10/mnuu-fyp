@@ -95,7 +95,7 @@ export default function Home() {
           mockup={
             <Mockup title="Preview Screen (Mockup)" label="Upload → Preview instantly">
               <Image 
-                src="https://picsum.photos/seed/1/900/620" 
+                src="https://images.unsplash.com/photo-1737978697863-5d65495b28ef?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxOXx8c2tpbiUyMGRpc2Vhc2V8ZW58MHx8fHwxNzY3NzI1NjIzfDA&ixlib=rb-4.1.0&q=80&w=1080" 
                 alt="Instant preview mockup"
                 width={900}
                 height={620}
