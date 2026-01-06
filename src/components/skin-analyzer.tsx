@@ -125,7 +125,7 @@ export function SkinAnalyzer() {
   };
 
   const useDemoImage = async () => {
-    const demoUrl = "https://i.postimg.cc/pVfY3XBs/PXL-20260104-193729746-NIGHT.jpg";
+    const demoUrl = "https://images.unsplash.com/photo-1617871693959-22225a4c9b83";
     setStatusTitle("Loading Demo...");
     setStatusSub("Fetching sample image...");
     setProgress(50); // Show some progress
