@@ -20,7 +20,6 @@ export function Header() {
             <Link href="#scan" className="rounded-full border border-transparent px-2.5 py-2 text-xs text-black/75 transition-all hover:-translate-y-px hover:border-primary/20 hover:bg-primary/5 hover:text-black">Scanner</Link>
             <Link href="#instant" className="rounded-full border border-transparent px-2.5 py-2 text-xs text-black/75 transition-all hover:-translate-y-px hover:border-primary/20 hover:bg-primary/5 hover:text-black">Instant Preview</Link>
             <Link href="#confidence" className="rounded-full border border-transparent px-2.5 py-2 text-xs text-black/75 transition-all hover:-translate-y-px hover:border-primary/20 hover:bg-primary/5 hover:text-black">Confidence Results</Link>
-            <Link href="#privacy" className="rounded-full border border-transparent px-2.5 py-2 text-xs text-black/75 transition-all hover:-translate-y-px hover:border-primary/20 hover:bg-primary/5 hover:text-black">Privacy-first</Link>
             <Link href="#reviews" className="rounded-full border border-transparent px-2.5 py-2 text-xs text-black/75 transition-all hover:-translate-y-px hover:border-primary/20 hover:bg-primary/5 hover:text-black">Reviews</Link>
         </nav>
       </div>

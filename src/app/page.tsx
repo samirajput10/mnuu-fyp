@@ -1,3 +1,4 @@
+
 import { Header } from "@/components/header";
 import { SkinAnalyzer } from "@/components/skin-analyzer";
 import { Button } from "@/components/ui/button";
@@ -109,22 +110,6 @@ export default function Home() {
           mockup={
              <Mockup title="Results Screen (Mockup)" label="Top 3 predictions + confidence bars" svg={
               <svg viewBox="0 0 900 620" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="r1" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stopColor="#EAF2FF"/><stop offset="1" stopColor="#FFFFFF"/></linearGradient><linearGradient id="r2" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stopColor="#0EA5E9"/><stop offset="1" stopColor="#1D4ED8"/></linearGradient></defs><rect width="900" height="620" fill="url(#r1)"/><rect x="70" y="70" width="760" height="92" rx="22" fill="#FFFFFF" stroke="#CFE0FF"/><rect x="92" y="100" width="420" height="16" rx="8" fill="#D6E6FF"/><rect x="92" y="126" width="320" height="16" rx="8" fill="#D6E6FF"/><rect x="650" y="98" width="160" height="42" rx="21" fill="url(#r2)"/><rect x="70" y="190" width="760" height="110" rx="24" fill="#FFFFFF" stroke="#CFE0FF"/><rect x="70" y="320" width="760" height="110" rx="24" fill="#FFFFFF" stroke="#CFE0FF"/><rect x="70" y="450" width="760" height="110" rx="24" fill="#FFFFFF" stroke="#CFE0FF"/><rect x="94" y="216" width="300" height="16" rx="8" fill="#C9DDFF"/><rect x="94" y="246" width="700" height="14" rx="7" fill="#E2EEFF"/><rect x="94" y="246" width="520" height="14" rx="7" fill="url(#r2)"/><rect x="94" y="346" width="280" height="16" rx="8" fill="#C9DDFF"/><rect x="94" y="376" width="700" height="14" rx="7" fill="#E2EEFF"/><rect x="94" y="376" width="380" height="14" rx="7" fill="url(#r2)"/><rect x="94" y="476" width="250" height="16" rx="8" fill="#C9DDFF"/><rect x="94" y="506" width="700" height="14" rx="7" fill="#E2EEFF"/><rect x="94" y="506" width="250" height="14" rx="7" fill="url(#r2)"/></svg>
-            } />
-          }
-        />
-
-        <FeatureSection
-          id="privacy"
-          title="Privacy-first"
-          description="Medical products must feel safe. This landing page is designed to support privacy—clear messaging, consent-first storage, and “no storage” mode."
-          bullets={[
-            { title: 'No storage by default', text: 'Prototype keeps everything on device only (frontend demo).' },
-            { title: 'Consent-first storage', text: 'Easy to add a checkbox before saving scans.' },
-            { title: 'Clinic-ready', text: 'Add login + scan history for professional workflow.' },
-          ]}
-          mockup={
-            <Mockup title="Privacy Screen (Mockup)" label="Consent-first + no-storage mode" svg={
-              <svg viewBox="0 0 900 620" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="p1" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stopColor="#EAF2FF"/><stop offset="1" stopColor="#FFFFFF"/></linearGradient><linearGradient id="p2" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stopColor="#0EA5E9"/><stop offset="1" stopColor="#1D4ED8"/></linearGradient></defs><rect width="900" height="620" fill="url(#p1)"/><rect x="70" y="70" width="760" height="120" rx="24" fill="#FFFFFF" stroke="#CFE0FF"/><rect x="92" y="106" width="420" height="16" rx="8" fill="#C9DDFF"/><rect x="92" y="132" width="540" height="16" rx="8" fill="#D6E6FF"/><rect x="70" y="220" width="760" height="120" rx="24" fill="#FFFFFF" stroke="#CFE0FF"/><rect x="92" y="252" width="440" height="16" rx="8" fill="#C9DDFF"/><rect x="92" y="282" width="620" height="16" rx="8" fill="#D6E6FF"/><rect x="92" y="372" width="36" height="36" rx="10" fill="#FFFFFF" stroke="#BFD6FF"/><path d="M102 390 l8 8 l18 -20" stroke="url(#p2)" strokeWidth="6" fill="none" strokeLinecap="round" strokeLinejoin="round"/><rect x="140" y="382" width="420" height="14" rx="7" fill="#D6E6FF"/><rect x="70" y="440" width="760" height="120" rx="24" fill="#FFFFFF" stroke="#CFE0FF"/><rect x="92" y="472" width="420" height="16" rx="8" fill="#C9DDFF"/><rect x="92" y="502" width="540" height="16" rx="8" fill="#D6E6FF"/><rect x="650" y="372" width="180" height="44" rx="22" fill="url(#p2)"/></svg>
             } />
           }
         />
