@@ -1,7 +1,7 @@
 "use client";
 
-import React, { useState, useCallback, useEffect, useRef } from "react";
-import { useFormState, useFormStatus } from "react-dom";
+import React, { useState, useCallback, useEffect, useRef, useActionState } from "react";
+import { useFormStatus } from "react-dom";
 import Image from "next/image";
 import { UploadCloud, X, Loader2, Info } from "lucide-react";
 import { cn } from "@/lib/utils";
@@ -14,7 +14,7 @@ import { AnalysisResults } from "./analysis-results";
 import { Progress } from "@/components/ui/progress";
 
 type FormState = {
-  data: GenerateImageAnalysisOutput | null;
+  data: GenerateImageAnalysis_Output | null;
   error: string | null;
 };
 
@@ -31,7 +31,7 @@ function SubmitButton({ disabled }: { disabled: boolean }) {
 }
 
 export function SkinAnalyzer() {
-  const [formState, formAction] = useFormState(analyzeSkinImage, initialState);
+  const [formState, formAction] = useActionState(analyzeSkinImage, initialState);
   const { toast } = useToast();
 
   const [imageFile, setImageFile] = useState<File | null>(null);
