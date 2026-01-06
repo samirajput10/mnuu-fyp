@@ -1,10 +1,12 @@
 
+
 import { Header } from "@/components/header";
 import { SkinAnalyzer } from "@/components/skin-analyzer";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import Link from "next/link";
+import Image from "next/image";
 import { Star } from "lucide-react";
 
 const FeatureSection = ({ id, title, description, bullets, mockup, reverse = false }: { id: string, title: string, description: string, bullets: { title: string, text: string }[], mockup: React.ReactNode, reverse?: boolean }) => (
@@ -31,7 +33,7 @@ const FeatureSection = ({ id, title, description, bullets, mockup, reverse = fal
 );
 
 
-const Mockup = ({ title, svg, label }: { title: string, svg: React.ReactNode, label: string }) => (
+const Mockup = ({ title, children, label }: { title: string, children: React.ReactNode, label: string }) => (
   <div className="relative overflow-hidden rounded-3xl border border-primary/10 bg-gradient-to-b from-white/90 to-white/70 shadow-2xl">
     <div className="flex h-12 items-center gap-2.5 border-b border-primary/10 bg-primary/5 px-3.5">
       <div className="flex gap-2">
@@ -41,7 +43,7 @@ const Mockup = ({ title, svg, label }: { title: string, svg: React.ReactNode, la
       </div>
       <div className="text-xs font-bold text-black/70">{title}</div>
     </div>
-    {svg}
+    {children}
     <div className="absolute bottom-3 left-3 rounded-full border border-primary/10 bg-white/80 px-2.5 py-2 text-xs font-bold text-black/70 shadow-lg backdrop-blur-sm">{label}</div>
   </div>
 );
@@ -73,7 +75,7 @@ export default function Home() {
                 </Button>
               </div>
               <div className="mt-2 rounded-2xl border border-primary/10 bg-white/75 p-3 text-xs text-black/70 shadow-lg">
-                <b>Tip:</b> Use bright light, sharp focus, and a close-up shot of the skin area. This tool is not a diagnosis.
+                <b>Tip:</b> Use bright, sharp focus, and a close-up shot of the skin area. This tool is not a diagnosis.
               </div>
           </Card>
           <div id="scan-analyzer">
@@ -91,9 +93,16 @@ export default function Home() {
             { title: 'Clear next action', text: 'The UI guides users to “Analyze with AI” without noise.' },
           ]}
           mockup={
-            <Mockup title="Preview Screen (Mockup)" label="Upload → Preview instantly" svg={
-              <svg viewBox="0 0 900 620" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="m1" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stopColor="#EAF2FF"/><stop offset="1" stopColor="#FFFFFF"/></linearGradient><linearGradient id="m2" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stopColor="#0EA5E9"/><stop offset="1" stopColor="#1D4ED8"/></linearGradient></defs><rect x="0" y="0" width="900" height="620" fill="url(#m1)"/><rect x="70" y="70" width="760" height="360" rx="28" fill="#FFFFFF" stroke="#CFE0FF"/><rect x="90" y="90" width="720" height="320" rx="24" fill="#F3F8FF"/><rect x="110" y="110" width="680" height="280" rx="22" fill="#E9F2FF"/><rect x="70" y="458" width="500" height="86" rx="22" fill="#FFFFFF" stroke="#CFE0FF"/><rect x="600" y="458" width="230" height="86" rx="22" fill="#FFFFFF" stroke="#CFE0FF"/><rect x="90" y="480" width="260" height="14" rx="7" fill="#D6E6FF"/><rect x="90" y="505" width="340" height="14" rx="7" fill="#D6E6FF"/><rect x="624" y="482" width="182" height="38" rx="19" fill="url(#m2)"/><circle cx="168" cy="250" r="56" fill="#D8E9FF"/><rect x="250" y="210" width="420" height="18" rx="9" fill="#D6E6FF"/><rect x="250" y="240" width="360" height="18" rx="9" fill="#D6E6FF"/><rect x="250" y="270" width="300" height="18" rx="9" fill="#D6E6FF"/></svg>
-            } />
+            <Mockup title="Preview Screen (Mockup)" label="Upload → Preview instantly">
+              <Image 
+                src="https://picsum.photos/seed/1/900/620" 
+                alt="Instant preview mockup"
+                width={900}
+                height={620}
+                data-ai-hint="abstract image"
+                className="object-cover"
+              />
+            </Mockup>
           }
         />
         
@@ -108,9 +117,16 @@ export default function Home() {
           ]}
           reverse
           mockup={
-             <Mockup title="Results Screen (Mockup)" label="Top 3 predictions + confidence bars" svg={
-              <svg viewBox="0 0 900 620" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="r1" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stopColor="#EAF2FF"/><stop offset="1" stopColor="#FFFFFF"/></linearGradient><linearGradient id="r2" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stopColor="#0EA5E9"/><stop offset="1" stopColor="#1D4ED8"/></linearGradient></defs><rect width="900" height="620" fill="url(#r1)"/><rect x="70" y="70" width="760" height="92" rx="22" fill="#FFFFFF" stroke="#CFE0FF"/><rect x="92" y="100" width="420" height="16" rx="8" fill="#D6E6FF"/><rect x="92" y="126" width="320" height="16" rx="8" fill="#D6E6FF"/><rect x="650" y="98" width="160" height="42" rx="21" fill="url(#r2)"/><rect x="70" y="190" width="760" height="110" rx="24" fill="#FFFFFF" stroke="#CFE0FF"/><rect x="70" y="320" width="760" height="110" rx="24" fill="#FFFFFF" stroke="#CFE0FF"/><rect x="70" y="450" width="760" height="110" rx="24" fill="#FFFFFF" stroke="#CFE0FF"/><rect x="94" y="216" width="300" height="16" rx="8" fill="#C9DDFF"/><rect x="94" y="246" width="700" height="14" rx="7" fill="#E2EEFF"/><rect x="94" y="246" width="520" height="14" rx="7" fill="url(#r2)"/><rect x="94" y="346" width="280" height="16" rx="8" fill="#C9DDFF"/><rect x="94" y="376" width="700" height="14" rx="7" fill="#E2EEFF"/><rect x="94" y="376" width="380" height="14" rx="7" fill="url(#r2)"/><rect x="94" y="476" width="250" height="16" rx="8" fill="#C9DDFF"/><rect x="94" y="506" width="700" height="14" rx="7" fill="#E2EEFF"/><rect x="94" y="506" width="250" height="14" rx="7" fill="url(#r2)"/></svg>
-            } />
+             <Mockup title="Results Screen (Mockup)" label="Top 3 predictions + confidence bars">
+              <Image 
+                src="https://picsum.photos/seed/2/900/620" 
+                alt="Confidence results mockup"
+                width={900}
+                height={620}
+                data-ai-hint="medical tech"
+                className="object-cover"
+              />
+            </Mockup>
           }
         />
 
