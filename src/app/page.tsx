@@ -130,6 +130,29 @@ export default function Home() {
           }
         />
 
+        <FeatureSection
+          id="privacy"
+          title="Privacy-first"
+          description="Medical products must feel safe. This landing page is designed to support privacy—clear messaging, consent-first storage, and “no storage” mode."
+          bullets={[
+            { title: 'No storage by default', text: 'Prototype keeps everything on device only (frontend demo).' },
+            { title: 'Consent-first storage', text: 'Easy to add a checkbox before saving scans.' },
+            { title: 'Clinic-ready', text: 'Add login + scan history for professional workflow.' },
+          ]}
+          mockup={
+            <Mockup title="Privacy Screen (Mockup)" label="Consent-first + no-storage mode">
+              <Image 
+                src="https://picsum.photos/seed/3/900/620" 
+                alt="Privacy-first mockup"
+                width={900}
+                height={620}
+                data-ai-hint="privacy security"
+                className="object-cover"
+              />
+            </Mockup>
+          }
+        />
+
         <section id="reviews" className="mt-4 grid grid-cols-1 md:grid-cols-2 gap-3 items-stretch">
             <Card className="p-4 bg-white/80 backdrop-blur-sm">
                 <div className="text-yellow-500 flex">★★★★★</div>
