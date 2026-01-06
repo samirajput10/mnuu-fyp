@@ -14,7 +14,7 @@ import { AnalysisResults } from "./analysis-results";
 import { Progress } from "@/components/ui/progress";
 
 type FormState = {
-  data: GenerateImageAnalysis_Output | null;
+  data: GenerateImageAnalysisOutput | null;
   error: string | null;
 };
 
@@ -124,13 +124,35 @@ export function SkinAnalyzer() {
     setStatusSub("Click “Analyze” to run AI screening.");
   };
 
-  const useDemoImage = () => {
-    const demo = "data:image/svg+xml;charset=utf-8," + encodeURIComponent(`<svg xmlns='http://www.w3.org/2000/svg' width='1200' height='800'><defs><linearGradient id='g' x1='0' y1='0' x2='1' y2='1'><stop offset='0' stop-color='#F3D7C6'/><stop offset='1' stop-color='#E3B9A1'/></linearGradient><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.7' numOctaves='3' stitchTiles='stitch'/><feColorMatrix type='matrix' values='1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 .25 0'/></filter></defs><rect width='1200' height='800' fill='url(#g)'/><rect width='1200' height='800' filter='url(#n)' opacity='.7'/><circle cx='720' cy='410' r='160' fill='rgba(29,78,216,.10)'/><circle cx='760' cy='430' r='80' fill='rgba(14,165,233,.10)'/></svg>`);
-    setImagePreview(demo);
-    setAnalysisResult(null);
-    setStatusTitle("Image Loaded");
-    setStatusSub(`demo-sample.svg • ready to analyze`);
-    setProgress(0);
+  const useDemoImage = async () => {
+    const demoUrl = "https://i.postimg.cc/pVfY3XBs/PXL-20260104-193729746-NIGHT.jpg";
+    setStatusTitle("Loading Demo...");
+    setStatusSub("Fetching sample image...");
+    setProgress(50); // Show some progress
+    try {
+        const response = await fetch(demoUrl);
+        const blob = await response.blob();
+        const reader = new FileReader();
+        reader.onloadend = () => {
+            const base64data = reader.result as string;
+            setImagePreview(base64data);
+            setAnalysisResult(null);
+            setStatusTitle("Image Loaded");
+            setStatusSub(`demo-sample.jpg • ready to analyze`);
+            setProgress(0);
+        };
+        reader.readAsDataURL(blob);
+    } catch (error) {
+        console.error("Failed to fetch demo image", error);
+        toast({
+            variant: "destructive",
+            title: "Failed to load demo",
+            description: "Could not fetch the sample image. Please check your connection."
+        });
+        setStatusTitle("Ready");
+        setStatusSub("Upload an image to begin.");
+        setProgress(0);
+    }
   };
   
   const handleAnalysis = (formData: FormData) => {
