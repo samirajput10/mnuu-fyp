@@ -119,7 +119,7 @@ export default function Home() {
           mockup={
              <Mockup title="Results Screen (Mockup)" label="Top 3 predictions + confidence bars">
               <Image 
-                src="https://picsum.photos/seed/2/900/620" 
+                src="https://images.unsplash.com/photo-1669399213378-2853e748f217?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxiYXIlMjBjaGFydHxlbnwwfHx8fDE3Njc3MjYyNzN8MA&ixlib=rb-4.1.0&q=80&w=1080" 
                 alt="Confidence results mockup"
                 width={900}
                 height={620}
