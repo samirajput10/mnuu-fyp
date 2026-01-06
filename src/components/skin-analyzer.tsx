@@ -126,7 +126,7 @@ export function SkinAnalyzer() {
   };
 
   const useDemoImage = async () => {
-    const demoUrl = "https://images.unsplash.com/photo-1621578634247-a8435b7e9f33?q=80&w=2070&auto=format&fit=crop";
+    const demoUrl = "https://images.unsplash.com/photo-1621578634247-a-woman-with-her-arm-around-her-shoulder-cxeb2Ftu_Ho?q=80&w=2070&auto=format&fit=crop";
     setStatusTitle("Loading Demo...");
     setStatusSub("Fetching sample image...");
     setProgress(50); // Show some progress
